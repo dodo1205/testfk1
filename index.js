@@ -147,9 +147,9 @@ app.get('/c/:uniqueId/manifest.json', (req, res) => {
             const fullUrlManifest = { ...addonInterface.manifest };
             // Ensure absolute URLs are correctly set (using baseUrl from config now)
             fullUrlManifest.resources = [
-                { name: "catalog", types: ["fankai-anime"], idPrefixes: ["fankai:"], endpoint: `${config.baseUrl}/catalog/{type}/{id}.json` },
-                { name: "meta", types: ["fankai-anime"], idPrefixes: ["fankai:"], endpoint: `${config.baseUrl}/meta/{type}/{id}.json` },
-                { name: "stream", types: ["fankai-anime"], idPrefixes: ["fankai:"], endpoint: `${config.baseUrl}/stream/{type}/{id}.json` }
+                { name: "catalog", types: ["fankai"], idPrefixes: ["fankai:"], endpoint: `${config.baseUrl}/catalog/{type}/{id}.json` },
+                { name: "meta", types: ["fankai"], idPrefixes: ["fankai:"], endpoint: `${config.baseUrl}/meta/{type}/{id}.json` },
+                { name: "stream", types: ["fankai"], idPrefixes: ["fankai:"], endpoint: `${config.baseUrl}/stream/{type}/{id}.json` }
                 // Playback endpoint is not part of standard manifest resources
             ];
             console.log('Manifest envoyé avec URLs absolues');
